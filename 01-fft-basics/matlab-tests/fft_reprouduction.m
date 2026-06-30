@@ -1,5 +1,4 @@
 % fft_reproduction.m  — grinding-signal-lab / 01-fft-basics
-% Ownership: signal construction, fft() call, and interpretation are Vincent's.
 % Scaffolding (time vector, plotting, axis layout) is provided.
 
 clear; clc; close all;
@@ -10,16 +9,16 @@ T  = 1;               % duration, seconds
 N  = fs * T;          % number of samples
 t  = (0:N-1) / fs;    % time vector, seconds
 
-% --- (1) YOURS: construct the signal --------------------------------
+% --- (1) constructing the signal --------------------------------
 % Build a sum of sinusoids with frequencies and amplitudes YOU choose.
 % Example shape (replace amplitudes/frequencies with your own choices):
 %   x = A1*sin(2*pi*f1*t) + A2*sin(2*pi*f2*t);
 x =5*sin(2*pi*500*t) ;  % <-- write this line yourself
 
-% --- (2) YOURS: take the FFT ----------------------------------------
+% --- (2)  take the FFT ----------------------------------------
 X = fft(x) ;   % <-- write this line yourself  (hint: fft(x))
 
-% --- (3) YOURS: build the magnitude + one-sided spectrum ------------
+% --- (3) build the magnitude + one-sided spectrum ------------
 % Decide: how many bins are meaningful? where does Nyquist sit?
 % Derive the frequency axis from fs and N — don't hard-code it.
 % mag    = abs(X) / N;            % normalisation — justify the /N in your README
